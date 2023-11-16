@@ -1,0 +1,329 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.skip-link-content{
+    text-decoration: none;
+    color: white;
+    background-color: orange;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 180%);
+    font-size: 9px;
+    border-radius: 25px;
+    padding: 5px;
+    
+}
+
+.skip-link-content a{
+    color: white;
+}
+
+.skip-link-content:focus{
+    color: orange;
+    background-color: white;
+    transform: translate(-50%, 750%);
+}
+
+.app-bar{
+    padding: 8px 16px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .app-bar__menu{
+    display: flex;
+    align-items: center;
+    
+}
+
+.app-bar .app-bar__menu button{
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+}
+.app-bar .app-bar__brand h1 {
+    color: black;
+    text-transform: uppercase;
+    font-size: 20px;
+    user-select: none;
+    position: relative;
+}
+
+.app-bar .app-bar__brand h1 span{
+    color: orange;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.app-bar .app-bar__navigation {
+    position: absolute;
+    top: 50px;
+    left: -180px;
+    width: 150px;
+    transition: all 0.3s;
+    padding: 8px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+    left: 0;
+}
+
+.app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+/* content */
+
+.hero-element{
+    position: relative;
+}
+
+.hero-element img{
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.5s ease-out;
+}
+
+.hero-element h2{
+    color: orange;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -220%);
+    font-size: 20px;
+}
+
+.hero-element p{
+    font-size: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    color: white;
+    text-align: center;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: orange;
+    color: white;
+    padding: 8px;
+    z-index: 150;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+
+.descfood{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+}
+
+.descfood img{
+    width: 200px;
+    margin-top: 20px;
+}
+
+.descfood p{
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.descfood h2{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: orange;
+    text-align: center;
+}
+
+.restorant-list{
+    width: 100%;
+    align-content: center;
+    padding: 3rem;
+    min-width:44px;
+    min-height:44px;
+}
+
+.restorant-list img{
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.restorant-list h2{
+    text-align: center;
+    color: orange;
+}
+.restorant-list .card{
+    position: relative;
+    justify-content: center; /* Mengatur ke tengah secara horizontal */
+    align-items: center; /* Mengatur ke tengah secara vertikal */
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px 0;
+}
+.restorant-list .content{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-3%);
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    padding: 5px 0;
+    width: 100%;
+    height: 25%;
+    
+}
+
+.content h3{
+    color: white;
+}
+
+.content h3 a{
+    color: white;
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.restorant-list div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.nama-restorant{
+    text-align: center;
+}
+
+.ratting{
+    text-align: center;
+    font-weight: bold;
+}
+
+.card-detail{
+    border: 1px solid black;
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-detail h2{
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.restaurant-info{
+    margin: 2rem;
+    text-align: justify;
+}
+
+i.fas.fa-star {
+    text-align: center;
+    color: gold;
+}
+
+.menu-section {
+    margin-top: 20px;
+}
+
+.menu-section h2 {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu-list {
+    
+    padding-left: 15px;
+}
+
+.menu-item {
+    margin-top: 10px;
+}
+
+.restaurant-categories {
+    margin-top: 20px;
+}
+
+.restaurant-info p{
+    margin-top: 20px;
+}
+
+.customer-reviews h2{
+    text-align: left;
+}
+
+.like {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #db0000;
+    
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    border-radius: 50%;
+    border: 0;
+    
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+footer{
+    width: 100%;
+    background-color: orange;
+    text-align: center;
+    margin: 5rem 0 5rem 0;
+    padding: 0.5rem;
+}
+
+footer a{
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+}

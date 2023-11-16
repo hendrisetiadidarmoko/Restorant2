@@ -1,0 +1,165 @@
+@media screen and (min-width: 350px) {
+    .restorant-list{
+        margin: 0;
+        justify-content: center; /* Mengatur ke tengah secara horizontal */
+        align-items: center;
+        display: grid;
+    }
+
+    .card{
+        margin: 15px 10px;
+    }
+
+    .descfood p{
+        margin: 15px;
+    }
+}
+
+
+
+@media screen and (min-width: 650px) {
+    .app-bar {
+        grid-template-columns: 1fr auto;
+        padding: 8px 32px;
+    }
+    
+    .app-bar .app-bar__brand h1 {
+        font-size: 1.5em;
+    }
+    
+    .app-bar .app-bar__menu {
+        display: none;
+    }
+    
+    .app-bar .app-bar__navigation {
+        position: static;
+        width: 100%;
+    }
+    
+    .app-bar .app-bar__navigation ul li {
+        display:inline-block;
+    }
+    
+    .app-bar .app-bar__navigation ul li a {
+        display: inline-block;
+        width: 120px;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .hero-element h2{
+        font-size: 40px;
+    }
+    
+    .hero-element p{
+        font-size: 20px;
+    }
+
+    .skip-link-content{
+        transform: translate(-50%, 300%);
+        font-size: 22px;
+    }
+    
+    .skip-link-content:focus{
+        transform: translate(-50%, 300%);
+    }
+
+    .descfood{
+        padding: 70px;
+    }
+    .descfood img{
+        width: 400px;
+        margin-top: 20px;
+    }
+
+    .descfood p{
+        font-size: 12px;
+        margin: 15px;
+    }
+
+    .restorant-list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    .restorant-list h2{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .card{
+        height: 250px;
+    }
+
+    .card-detail{
+        width: 600px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .restorant-list{
+        gap: 1.5rem;
+    }
+    .card{
+        height: 280px;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    .restorant-list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    .restorant-list h2{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .card{
+        height: 250px;
+    }
+
+    .card-detail{
+        width: 800px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-element h2{
+        font-size: 80px;
+    }
+    
+    .hero-element p{
+        font-size: 40px;
+    }
+
+    .skip-link-content{
+        transform: translate(-50%, 300%);
+        font-size: 42px;
+    }
+    
+    .skip-link-content:focus{
+        transform: translate(-50%, 300%);
+    }
+    hero-element {
+        width: 100%;
+    }
+    .descfood{
+        margin: 20px 30px;
+    }
+    .descfood img{
+        width: 500px;
+    }
+
+    .descfood p{
+        font-size: 17px;
+    }
+
+    .card{
+        height: 300px;
+    }
+
+}
