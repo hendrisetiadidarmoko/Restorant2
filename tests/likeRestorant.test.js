@@ -44,7 +44,7 @@ describe('Liking A Restaurant', () => {
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
 
     // Tidak ada film yang ganda
-    expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([{ id: 1 }]);
+    expect(await FavoriteRestaurantIdb.getAllRestaurant()).toEqual([{ id: 1 }]);
 
     await FavoriteRestaurantIdb.deleteRestaurant(1);
   });
@@ -54,6 +54,6 @@ describe('Liking A Restaurant', () => {
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
 
-    expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([]);
+    expect(await FavoriteRestaurantIdb.getAllRestaurant()).toEqual([]);
   });
 });
