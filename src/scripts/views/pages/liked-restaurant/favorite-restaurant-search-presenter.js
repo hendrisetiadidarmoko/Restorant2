@@ -19,14 +19,14 @@ class FavoriteRestaurantSearchPresenter {
     if (this.latestQuery.length > 0) {
       foundRestaurants = await this._favoriteRestaurants.searchRestaurants(this.latestQuery);
     } else {
-      foundRestaurants = await this._favoriteRestaurants.getAllRestaurants();
+      foundRestaurants = await this._favoriteRestaurants.getAllRestaurant();
     }
     this._showFoundRestaurants(foundRestaurants);
   }
 
   // eslint-disable-next-line class-methods-use-this
   _showFoundRestaurants(restaurants) {
-    this._view.showRestaurants(restaurants);
+    this._view.showFavoriteRestaurant(restaurants);
   }
 
   get latestQuery() {

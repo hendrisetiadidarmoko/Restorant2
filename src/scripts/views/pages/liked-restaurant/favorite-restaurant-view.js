@@ -4,13 +4,12 @@ class FavoriteRestaurantView {
   // eslint-disable-next-line class-methods-use-this
   getTemplate() {
     return `
-      <div class="content">
-        <input id="query" type="text">
-        <h2 class="content__heading">Your Liked Restaurants</h2>
-  
-        <div id="restaurants" class="restaurants">
-        </div>
-      </div>
+    <div class="content">
+      <input id="query" type="text">
+      <section class="restorant-list" id="restaurants">
+        <h2>Favorite Restaurant</h2>
+      </section>
+    </div>
     `;
   }
 
@@ -26,7 +25,7 @@ class FavoriteRestaurantView {
     if (restaurants.length) {
       html = restaurants.reduce((carry, restaurant) => carry.concat(createRestaurantTemplate(restaurant)), '');
     } else {
-      html = this._getEmptyMovieTemplate();
+      html = this._getEmptyRestaurantTemplate();
     }
 
     document.getElementById('restaurants').innerHTML = html;
@@ -38,7 +37,7 @@ class FavoriteRestaurantView {
   _getEmptyRestaurantTemplate() {
     return `
       <div class="restaurant-item__not__found">
-        Tidak ada restaurant untuk ditampilkan
+        Tidak ada restaurant untuk ditampilkan:)
       </div>
     `;
   }
